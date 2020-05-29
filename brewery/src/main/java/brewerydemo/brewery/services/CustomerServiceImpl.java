@@ -9,21 +9,21 @@ import java.util.UUID;
 @Slf4j
 public class CustomerServiceImpl implements CustomerService {
     @Override
-    public CustomerDTO getCustById(UUID id) {
-        return CustomerDTO.builder().custId(UUID.randomUUID())
-                .custName("Kristen").build();
+    public CustomerDTO getCustomerById(UUID id) {
+        return CustomerDTO.builder().customerId(UUID.randomUUID())
+                .customerName("Kristen").build();
     }
 
     @Override
     public CustomerDTO handlePost(CustomerDTO customerDTO) {
         return CustomerDTO.builder()
-                .custId(UUID.randomUUID())
+                .customerId(UUID.randomUUID())
                 .build();
     }
 
 
     @Override
-    public void deleteCustomer(UUID custId) {
+    public void deleteCustomer(UUID customerId) {
         log.debug("Deleting customer..");
     }
 
